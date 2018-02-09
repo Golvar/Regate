@@ -4,7 +4,5 @@ bin/
 .project
 .metadata
 .settings
-Makefile
-cmake_install.cmake
-CMakeFiles/
-CMakeCache.txt
+build/
+Eole.iml
