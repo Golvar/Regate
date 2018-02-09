@@ -1,7 +1,4 @@
-ines (28 sloc) 1.12 KB
-version: '{build}'
-skip_tags: true
-clone_depth: 10
+
 environment:
   MAVEN_VERSION: 3.5.0
   matrix:
