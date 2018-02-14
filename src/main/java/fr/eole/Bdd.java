@@ -22,8 +22,12 @@ public class Bdd {
 	private static Statement st;
 	private static ResultSet rs;
 	
-	public Bdd() throws SQLException{
-		Connexion();
+	public Bdd() {
+		try {
+			Connexion();
+		}catch(Exception ex){
+			System.out.println(ex);
+		}
 	}
 
 	public void Connexion(){
@@ -129,7 +133,7 @@ public class Bdd {
 		System.out.println("connexion fermé");
 	}
 		
-	public void reqAjoutParticipant(String nomParticipant, String prenomParticipant, String nomBateau, String typeBateau, int rating ) throws SQLException{
+	public void reqAjoutParticipant(String nomParticipant, String prenomParticipant, String nomBateau, String typeBateau, int rating ) {
 		Connexion();
 		int id = listeParticipant.size();
 		try{
@@ -153,7 +157,7 @@ public class Bdd {
 		deconnexion();
 	}
 	
-	public void reqAjoutRegate(String nomRegate, String dateRegate, String lieuDepart, String lieuArrive, int distance, ArrayList<Participant> participantsRegate) throws SQLException{
+	public void reqAjoutRegate(String nomRegate, String dateRegate, String lieuDepart, String lieuArrive, int distance, ArrayList<Participant> participantsRegate) {
 		
 		Connexion();
 		 
@@ -183,7 +187,7 @@ public class Bdd {
 		deconnexion();
 	}
 	
-	public void reqAjoutParticipantReg(int idParticipant, int idRegate) throws SQLException{
+	public void reqAjoutParticipantReg(int idParticipant, int idRegate) {
 		
 		 try {
 			 PreparedStatement prepare = con.prepareStatement("INSERT INTO `eole`.`classement` (`ID_PARTICIPANT`, `ID_REGATE`, `TEMPS_REEL`, `POSITION`)VALUES (?, ?, ?, ?); ");

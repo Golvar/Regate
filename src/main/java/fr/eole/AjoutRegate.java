@@ -94,7 +94,7 @@ public class AjoutRegate extends JFrame
 					
 					maDateString = formatter.format(cboDate.getDate());
 					maBdd.reqAjoutRegate(tfNomRegate.getText(), maDateString, tfLieuDepart.getText(), tfLieuArrivee.getText() , Integer.parseInt(tfDistance.getText()), listeParticipantRegate);
-				} catch (SQLException e1) {}		
+				} catch (Exception e1) {}
 			}
 		});
 		

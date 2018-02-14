@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Accueil extends JFrame
 {
 	private static final long serialVersionUID = 1L;
-	private JLabel JImageBateau = new JLabel(new ImageIcon("bateau2.gif"));
+	private JLabel JImageBateau = new JLabel(new ImageIcon("src/img/boat.gif"));
 	private JPanel cpImage = new JPanel();
 	Window window;
 	

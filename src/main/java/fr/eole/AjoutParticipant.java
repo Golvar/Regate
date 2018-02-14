@@ -87,7 +87,7 @@ public class AjoutParticipant extends JFrame
 				try 
 				{
 						maBdd.reqAjoutParticipant(tfNomParticipant.getText(), tfPrenomParticipant.getText() , tfNomDuVoilier.getText(), tfCategorieVoilier.getText() , Integer.parseInt(tfRating.getText()));
-				} catch (SQLException e1) {
+				} catch (Exception e1) {
 					e1.printStackTrace();
 				}		
 			}
